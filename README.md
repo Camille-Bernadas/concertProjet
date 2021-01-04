@@ -1,3 +1,4 @@
+Warning: Bad MarkDown => hard to read
 #README
 I have had a lot of trouble doing this project. So, even though it's not as advanced as it should be, i'm still pretty proud of my job.
 However, I feel the need to list all the things that should be better that I can't do now, for I am exhausted.
