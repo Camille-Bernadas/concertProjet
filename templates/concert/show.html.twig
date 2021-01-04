@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concert{% endblock %}
+
+{% block body %}
+    <h1>Concert</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ concert.id }}</td>
+            </tr>
+            <tr>
+                <th>Band</th>
+                <td>{{ concert.band.name }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+{% endblock %}

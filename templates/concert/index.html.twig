@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}[CCC] Concerts!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+
+    <h1>Concerts to come:</h1>
+
+    {% include 'concert/list.html.twig' %}
+
+    <a href="{{ path('concert_create') }}">
+    Create a new concert</a>
+
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Band index{% endblock %}
+
+{% block body %}
+    <h1>Band index</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Style</th>
+
+                <th scope="col">Year of Creation</th>
+                <th scope="col">Picture</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for band in bands %}
+            <tr>
+                <td scope="row">{{ band.id }}</td>
+                <td>{{ band.name }}</td>
+                <td>{{ band.style }}</td>
+
+                <td>{{ band.yearOfCreation ? band.yearOfCreation|date('Y-m-d') : '' }}</td>
+                <td>{{ band.picture }}</td>
+                <td>
+                    <a href="{{ path('band_show', {'id': band.id}) }}">show</a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

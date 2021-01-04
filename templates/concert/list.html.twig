@@ -1,0 +1,34 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Tour Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Hall</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for concert in concerts %}
+  <tr>
+      <th scope="row"><a href="/band/{{ concert.getBand().getId() }}">{{ concert.getBand().getName() }}</a></th>
+      <td>{{ concert.getTourName() }}</td>
+      <td>{{ concert.getDate().format("d/m/Y") }}</td>
+      <td>{{ concert.hall.name }}</td>
+      <td>
+      {% if is_granted('ROLE_ADMIN') %}
+      <a href="/concert/edit/{{ concert.getId() }}"><button type="button" class="btn btn-primary">Update</button></a>
+      <a href="/delete/{{ concert.getId() }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+      {% endif %}
+      
+      
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+    
+
+    {% if not concerts %}
+        ... Well, no concert planned... yet ?
+    {% endif %}

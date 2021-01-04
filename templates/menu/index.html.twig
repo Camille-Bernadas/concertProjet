@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}[CCC] WELCOME!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Welcome to Crazy Concert Carousel!</h1>
+    <div class="card" style="color: black">
+    <p>
+        It's a real pleasure to welcome you and your <span style="color: #e40303">friends</span>/<span style="color: #ff8c00">family</span>/<span style="color: #dfcd00">company</span>/
+        <span style="color: #008026">service pet</span>/<span style="color: #004dff">band</span>/<span style="color: #750787">S.O.</span> to our concert halls.
+        
+        <br>
+        We love the music and the ~vibe~ of the best shows and we wanted to share that with you.
+        <br>
+    </p>
+    </div>
+
+    <div><br></div>
+
+    {% include 'concert/list.html.twig' %}
+
+</div>
+{% endblock %}
