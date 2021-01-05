@@ -7,18 +7,15 @@ use Doctrine\Persistence\ObjectManager;
 use App\Entity\Hall;
 use App\Repository\HallRepository;
 use App\Repository\ConcertHallRepository;
+use App\DataFixtures\ConcertHallFixtures;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class HallFixtures extends Fixture
+class HallFixtures extends Fixture implements DependentFixtureInterface
 {
-
-    public function __construct(ConcertHallRepository $concertHallRepository)
-    {
-        $this->concertHallRepository = $concertHallRepository;
-    }
 
     public function load(ObjectManager $manager)
     {
-        $concertHall = $this->concertHallRepository->findOneBy(['name'=>'CCC MTP']);
+        $concertHall = $this->getReference(ConcertHallFixtures::HALL_1);
 
         $hall = new Hall();
         $hall->setName("MJ Stage")
@@ -54,4 +51,5 @@ class HallFixtures extends Fixture
             ConcertHallFixtures::class,
         ];
     }
+    
 }

@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Band;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\Concert;
 
 /**
  * @method Band|null find($id, $lockMode = null, $lockVersion = null)
@@ -48,4 +49,17 @@ class BandRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function nextConcerts($date, $id): ?Band
+    {
+        return $this->createQueryBuilder('band')
+            ->join('band.concerts', 'concert')
+            ->Where('band.id = :id')
+            ->andWhere('concert.date > :now')
+            ->setParameter('id', $id)
+            ->setParameter('now', $date)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
 }

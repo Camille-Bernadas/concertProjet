@@ -109,7 +109,7 @@ class ConcertController extends AbstractController
     }
 
     /**
-     * @Route("/concert/{id}", name="concert_show", methods={"GET"})
+     * @Route("/concert/show/{id}", name="concert_show", methods={"GET"})
      */
     public function show(Concert $concert): Response
     {

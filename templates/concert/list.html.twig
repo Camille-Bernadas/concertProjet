@@ -16,6 +16,7 @@
       <td>{{ concert.getDate().format("d/m/Y") }}</td>
       <td>{{ concert.hall.name }}</td>
       <td>
+      <a href="/concert/show/{{ concert.getId() }}"><button type="button" class="btn btn-success">See</button></a>
       {% if is_granted('ROLE_ADMIN') %}
       <a href="/concert/edit/{{ concert.getId() }}"><button type="button" class="btn btn-primary">Update</button></a>
       <a href="/delete/{{ concert.getId() }}"><button type="button" class="btn btn-danger">Delete</button></a></td>

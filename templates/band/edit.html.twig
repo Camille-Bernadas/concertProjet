@@ -9,6 +9,6 @@
     {{ include('band/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('band_index') }}"><button type="button" class="btn btn-success">Back to List</button></a>
-
-    {{ include('band/_delete_form.html.twig') }}
+    <br>
+    <a href="/bands/delete/{{ band.getId() }}"><button type="button" class="btn btn-danger">Delete</button></a></td>
 {% endblock %}

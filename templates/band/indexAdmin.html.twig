@@ -28,7 +28,7 @@
                 <td>{{ band.picture }}</td>
                 <td>
                     <a href="{{ path('band_show', {'id': band.id}) }}">show</a>
-
+                    <a href="{{ path('band_edit', {'id': band.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -38,5 +38,7 @@
         {% endfor %}
         </tbody>
     </table>
+
+    <a href="{{ path('band_new') }}">Create new</a>
 
 {% endblock %}

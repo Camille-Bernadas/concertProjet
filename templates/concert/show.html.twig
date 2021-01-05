@@ -3,21 +3,31 @@
 {% block title %}Concert{% endblock %}
 
 {% block body %}
+<div class="example-wrapper">
     <h1>Concert</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ concert.id }}</td>
+                <th>Band</th>
+                <td><a href="/band/{{ concert.band.id }}">{{ concert.band.name }}</a></td>
             </tr>
             <tr>
-                <th>Band</th>
-                <td>{{ concert.band.name }}</td>
+                <th>Hall</th>
+                <td>{{ concert.hall.name }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{concert.date ? concert.date|date('d / m / Y') : ''}}</td>
+            </tr>
+            <tr>
+                <th>Tour Name</th>
+                <td>{{concert.tourName}}</td>
             </tr>
             
         </tbody>
     </table>
 
-
+</div>
+{% include 'footer.html.twig' %}
 {% endblock %}

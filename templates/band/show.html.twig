@@ -9,11 +9,13 @@
 </style>
 
 <div class="example-wrapper">
+<img class="card-img-top" src="{{ asset("picture/" ~ band.getPicture())}}" alt="{{band.getPicture()}}" style="max-width: 50%; border: 1px solid #ddd">
 <div class="card-group">
+    
 {% for member in members %}
 
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{ asset("picture/" ~ member.getPicture())}}" alt="Card image cap">
+    <img class="card-img-top" src="{{ asset("picture/" ~ member.getPicture())}}" alt="{{ member.getName() }} picture">
     <div class="card-body">
         <p class="card-title">{{ member.getFirstName() }} {{ member.getName() }}</p>
         <p class="card-text">Born on {{ member.getBirthDate().format("d/m/Y") }}</p>
@@ -21,6 +23,11 @@
     </div>
     </div>
 {% endfor %}
+</div>
+<div>
+<h1>Next concerts:</h1>
+{% include 'band/next.html.twig' %}
+</div>
 </div>
 </div>
 {% endblock %}

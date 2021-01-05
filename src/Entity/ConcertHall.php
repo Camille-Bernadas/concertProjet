@@ -40,7 +40,7 @@ class ConcertHall
     private $city;
 
     /**
-     * @ORM\OneToMany(targetEntity=hall::class, mappedBy="concertHall")
+     * @ORM\OneToMany(targetEntity=Hall::class, mappedBy="concertHall")
      */
     private $halls;
 
