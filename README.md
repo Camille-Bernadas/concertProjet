@@ -1,11 +1,12 @@
 Warning: Bad MarkDown => hard to read
+
 #README
 
-##Update
+## Update
 With 3 more hours, I feel like the website is pretty good. The style still is bad, and for some reason the very old concerts appear as "future concerts" in the show_band page.
 However, the CRUDs, footer and next concerts are done. YAY !
 
-##Ending note
+## Ending note
 I have had a lot of trouble doing this project. So, even though it's not as advanced as it should be, i'm still pretty proud of my job.
 
 However, I feel the need to list all the things that should be better that I can't do now, for I am exhausted.
@@ -23,13 +24,13 @@ I hope I'll do better from now one. I really hated all this when I was stuck, bu
 
 P.S. I wanted to do a french version of this text, but I really am tired so it's gonna be translated by Google. I'm not even english, i'm french, but meh.
 
-#LISEZMOI
+# LISEZMOI
 
-##Mise à jour
+## Mise à jour
 Avec 3h de plus, j'ai l'impression que le site est plutôt bon. Le style est toujours mauvais, et pour je ne sais quelle raison les très vieux concerts apparaissent comme "futurs concerts" dans la page d'un groupe.
 Cependant, les CRUD, pied de page et "prochains concerts" sont faits. YOUPI!
 
-##Note de fin
+## Note de fin
 J'ai eu beaucoup de mal à réaliser ce projet. Donc, même si ce n'est pas aussi avancé que ça devrait être, je suis quand même assez fier de mon travail.
 Cependant, je ressens le besoin d'énumérer toutes les choses qui devraient être mieux que je ne peux pas faire maintenant, parce que je suis épuisé.
         - CRUD Groupe
